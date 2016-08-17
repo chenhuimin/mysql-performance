@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: dev
+  main:
+    show-banner: false
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  datasource:
+    tomcat:
+      initial-size: 10
+      max-active: 500
+      max-idle: 100
+      min-idle: 10
+      test-on-borrow: true
+      test-on-return: true
+      test-on-connect: true
+      validation-query: SELECT 1
+      test-while-idle: true
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        max_fetch_depth: 3
+        jdbc:
+          fetch_size: 1000
+          batch_size: 30
+  data:
+    jpa:
+      repositories:
+        enabled: true
+debug: false

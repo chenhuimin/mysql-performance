@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: root
+    password: 123abc..
+    url: jdbc:mysql://192.168.50.10:3306/test?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+# REDIS (RedisProperties)
+
+  redis:
+     database: 0
+     host: 192.168.50.10 # server host
+     #password: # server password
+     port: 6379 # connection port
+     pool:
+       max-idle: 8 # pool settings ...
+       min-idle: 0
+       max-active: 8
+       max-wait: -1
+     #sentinel:
+       #master: # name of Redis server
+       #nodes: # comma-separated list of host:port pairs
